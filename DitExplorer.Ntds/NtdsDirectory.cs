@@ -35,7 +35,7 @@ public partial class NtdsDirectory : IDirectory
 	/// <summary>
 	/// Size of pages in NTDS.dit
 	/// </summary>
-	private const int NtdsPageSize = 8192;
+	private const int NtdsPageSize = 32768; //changed it from 8kb to 32 kb to support ntds.dit files from windows server 2025
 	private const string DataTableName = "datatable";
 	private const string NameIndex = "INDEX_00090001";
 	private const string DntIndexName = "DNT_index";
