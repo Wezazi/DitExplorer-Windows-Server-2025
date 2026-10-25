@@ -1,3 +1,34 @@
+# My Fork Updates
+
+I changed the database page size from 8192 bytes to 32768 bytes to support NTDS.dit files extracted from windows server 2025. Download the original repo if the database size isn't 32kb.
+
+Here are some instructions for the nontechnical people:
+
+Install visual studio (most recent version works) with .NET desktop development.  
+
+Open visual studio and select "open a project or solution", If you see "This project is targeting a version of .NET which is not installed" in the top right, press on the install prompt besides it.
+
+Once the install is done, Press the tools tab in the menu at the top, select Package manager settings under NuGet package Manager
+
+Expand NuGet Package Manager on the left and press on sources. You should see Package sources.
+
+if package sources is empty click on add:  
+Name: nuget or anything you want  
+Source: https://api.nuget.org/v3/index.json  
+
+Make sure that the box is checked under enabled when you have added it  
+
+Under solution explorer on the right, Right click `Solution 'DitExplorer' (8 out of 8 projects)` and press on restore NuGet Packages  
+
+Right click `DitExplorer.UI.WpfApp` and press build  
+
+If you got no errors, you can start the application:  
+
+Right click `DitExplorer.UI.WpfApp` and press set as startup project. Then you can run it by pressing the light green button at the top
+
+
+
+
 # DIT Explorer
 DIT Explorer is a Windows application written in C# for browsing a NTDS.dit file.
 Created in Visual Studio 2022.
